@@ -1,0 +1,171 @@
+[1mdiff --git a/find.js b/find.js[m
+[1mdeleted file mode 100644[m
+[1mindex 4a71ca8..0000000[m
+[1m--- a/find.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,32 +0,0 @@[m
+[31m-let bandas = [{[m
+[31m-    nombre: "Nirvana",[m
+[31m-    años: "6 años"[m
+[31m-  },[m
+[31m-[m
+[31m-  {[m
+[31m-    nombres: "Beatles",[m
+[31m-    años: "10 años"[m
+[31m-  },[m
+[31m-[m
+[31m-  {[m
+[31m-    nombre: "Bunkers",[m
+[31m-    años: "15 años"[m
+[31m-  },[m
+[31m-][m
+[31m-[m
+[31m- //Declaro las variables las cuales voy a utilizar [m
+[31m-[m
+[31m-function encuentraMiband(bandfav) {[m
+[31m-  return bandfav.nombres === "Beatles"[m
+[31m-}[m
+[31m-[m
+[31m-//hago una función para especificar lo que quiero buscar[m
+[31m-[m
+[31m-let mibanda = bandas.find(mibanda => encuentraMiband(mibanda));[m
+[31m-[m
+[31m-//cuando terminó el otro proceso por ultimo creo una variable para poder utilizar el filter especificando que es lo que [m
+[31m-//quiero que me find y por ultimo pongo la variable que quiero [m
+[31m-[m
+[31m-console.log(mibanda);[m
+[31m-[m
+[31m-[m
+[1mdiff --git a/findindex.js b/findindex.js[m
+[1mdeleted file mode 100644[m
+[1mindex 763d4db..0000000[m
+[1m--- a/findindex.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,6 +0,0 @@[m
+[31m-const canciones = ["Voto Latino", "Que no te haga bobo jacabo", "Frijolero", "Here we Kum", "Gimme the power"];[m
+[31m-[m
+[31m-const nombre = canciones.findIndex(cancion => cancion === "Voto Latino");[m
+[31m-[m
+[31m-console.log(nombre); [m
+[31m-console.log(canciones[nombre]); [m
+\ No newline at end of file[m
+[1mdiff --git a/hoisting.js b/hoisting.js[m
+[1mdeleted file mode 100644[m
+[1mindex 6c20a88..0000000[m
+[1m--- a/hoisting.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,5 +0,0 @@[m
+[31m-greet();[m
+[31m-[m
+[31m-function greet() {[m
+[31m-    console.log('Hi, a todos.');[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/index.html b/index.html[m
+[1mdeleted file mode 100644[m
+[1mindex c6223f8..0000000[m
+[1m--- a/index.html[m
+[1m+++ /dev/null[m
+[36m@@ -1,20 +0,0 @@[m
+[31m-<!DOCTYPE html>[m
+[31m-<html lang="en">[m
+[31m-<head>[m
+[31m-    <meta charset="UTF-8">[m
+[31m-    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[31m-    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-    <title>Document</title>[m
+[31m-    <script src="FaustoAlonsoAlvaradoSilva_map_DWI.js"></script>[m
+[31m-    <script src="FaustoAlonsoAlvaradoSilva_filter_DWI.js"></script>[m
+[31m-    <script src="find.js"></script>[m
+[31m-    <script src="reduce.js"></script>[m
+[31m-    <script src="findindex.js"></script>[m
+[31m-    <script src="replace.js"></script>[m
+[31m-    <script src="hoisting.js"></script>[m
+[31m-    <script src="promesas.js"></script>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-    [m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/map.js b/map.js[m
+[1mdeleted file mode 100644[m
+[1mindex abefb1f..0000000[m
+[1m--- a/map.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,20 +0,0 @@[m
+[31m-const vengadores = [[m
+[31m-    { nombre: "Tony", apellidos: "Stark" },[m
+[31m-    { nombre: "Peter", apellidos: "Parker" },[m
+[31m-    { nombre: "Stephen", apellidos: "Strange" },[m
+[31m-    { nombre: "Miles", apellidos: "Morales" },[m
+[31m-[m
+[31m-    //Declaro las contsnates las cualres voy a llamar[m
+[31m- [m
+[31m-  ];[m
+[31m-  [m
+[31m-  function generarNombre({ nombre, apellidos }) {[m
+[31m-    return `${nombre} ${apellidos}`;[m
+[31m-    //En esta parte declaro la función con las constantes que cree para poder implimirlas[m
+[31m-  }[m
+[31m-  [m
+[31m-  const nombres = vengadores.map(generarNombre);[m
+[31m-  [m
+[31m-  console.log(nombres); [m
+[31m-[m
+[31m-  //Por ultimo solo imprimo las variables que cree en la función que estoy asgigando [m
+\ No newline at end of file[m
+[1mdiff --git a/promesas.js b/promesas.js[m
+[1mdeleted file mode 100644[m
+[1mindex 6eac48e..0000000[m
+[1m--- a/promesas.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,17 +0,0 @@[m
+[31m-const doTask = (iterations) => new Promise((resolve, reject) => {[m
+[31m-    const numbers = [];[m
+[31m-    for (let i = 0; i < iterations; i++) {[m
+[31m-      const number = 1 + Math.floor(Math.random() * 6);[m
+[31m-      numbers.push(number);[m
+[31m-      if (number === 6) {[m
+[31m-        reject({[m
+[31m-          error: true,[m
+[31m-          message: "Se ha sacado un 6"[m
+[31m-        });[m
+[31m-      }[m
+[31m-    }[m
+[31m-    resolve({[m
+[31m-      error: false,[m
+[31m-      value: numbers[m
+[31m-    });[m
+[31m-  });[m
+\ No newline at end of file[m
+[1mdiff --git a/reduce.js b/reduce.js[m
+[1mdeleted file mode 100644[m
+[1mindex 282a352..0000000[m
+[1m--- a/reduce.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,9 +0,0 @@[m
+[31m-function resta(a, b) {[m
+[31m-    return a - b;[m
+[31m-  }[m
+[31m-  [m
+[31m-  const numeros = [10, 10];[m
+[31m-  [m
+[31m-  const resultado = numeros.reduce(resta);[m
+[31m-  [m
+[31m-  console.log(resultado); [m
+\ No newline at end of file[m
+[1mdiff --git a/replace.js b/replace.js[m
+[1mdeleted file mode 100644[m
+[1mindex 19d552d..0000000[m
+[1m--- a/replace.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,4 +0,0 @@[m
+[31m-const str = 'JavaScript';[m
+[31m-const nuevaStr = str.replace("ava", "-");[m
+[31m-console.log(nuevaStr);[m
+[31m-// J-Script[m
+\ No newline at end of file[m
+[1mdiff --git a/robots.txt b/robots.txt[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
